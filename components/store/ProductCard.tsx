@@ -28,8 +28,8 @@ export function ProductCard({
           alt={product.name}
           label={product.metal === "silver" ? "Silver bullion" : "Gold bullion"}
           sizes="(max-width: 768px) 50vw, 25vw"
-          className="absolute inset-0 bg-white"
-          imgClassName="object-contain p-6 transition-transform duration-700 ease-luxe group-hover:scale-[1.07]"
+          className="absolute inset-0"
+          imgClassName="object-cover transition-transform duration-700 ease-luxe group-hover:scale-[1.07]"
         />
         {product.serialNumbered && (
           <span className="absolute left-3 top-3 rounded-full border border-pg-border-strong bg-pg-bg/70 px-2.5 py-1 text-[10px] uppercase tracking-wide text-pg-text-muted backdrop-blur-sm">

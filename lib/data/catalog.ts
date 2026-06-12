@@ -5,10 +5,11 @@ import type { Category, Collection, Product } from "./types";
  * They exist so the UI renders with realistic content while there is no backend.
  * Swap this module for a real API and the components stay unchanged.
  *
- * Product images live in /public/images/products and are the real manufacturer
- * products per SKU (Valcambi Suisse bars/round; SAM Precious Metals bar/coin/
- * silver). NOTE: sourced from manufacturer/dealer sites for the build — replace
- * with officially licensed or own-shot photography before production launch.
+ * Product images live in /public/images/products, one per SKU, generated via
+ * the banana/Gemini Nano Banana pipeline (scripts/gen_products.py) with a single
+ * shared studio style for visual consistency. NOTE: these are AI-generated
+ * representations, not photographs of the actual minted products — replace with
+ * real licensed or own-shot product photography before production launch.
  */
 
 export const CATEGORIES: Category[] = [
@@ -71,7 +72,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 627,
     purity: "999.9",
     serialNumbered: true,
-    image: "/images/products/valcambi-1g.jpg",
+    image: "/images/products/valcambi-1g.webp",
     badges: ["LBMA approved", "Swiss made"],
   },
   {
@@ -86,7 +87,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 1540,
     purity: "999.9",
     serialNumbered: true,
-    image: "/images/products/valcambi-5g.jpg",
+    image: "/images/products/valcambi-5g.webp",
     badges: ["LBMA approved", "Swiss made"],
   },
   {
@@ -101,7 +102,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 3020,
     purity: "999.9",
     serialNumbered: true,
-    image: "/images/products/valcambi-10g.jpg",
+    image: "/images/products/valcambi-10g.webp",
     badges: ["LBMA approved", "Swiss made"],
   },
   {
@@ -116,7 +117,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 5980,
     purity: "999.9",
     serialNumbered: true,
-    image: "/images/products/valcambi-20g.jpg",
+    image: "/images/products/valcambi-20g.webp",
     badges: ["LBMA approved", "Swiss made"],
   },
   {
@@ -131,7 +132,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 9180,
     purity: "999.9",
     serialNumbered: true,
-    image: "/images/products/valcambi-1oz.jpg",
+    image: "/images/products/valcambi-1oz.webp",
     badges: ["LBMA approved", "Swiss made", "Serial numbered"],
   },
   // Valcambi gold coins / rounds
@@ -147,7 +148,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 645,
     purity: "999.9",
     serialNumbered: false,
-    image: "/images/products/valcambi-round.jpg",
+    image: "/images/products/valcambi-round.webp",
     badges: ["LBMA approved", "Swiss made"],
   },
   {
@@ -162,7 +163,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 2360,
     purity: "999.9",
     serialNumbered: false,
-    image: "/images/products/valcambi-round.jpg",
+    image: "/images/products/valcambi-round.webp",
     badges: ["LBMA approved", "Swiss made"],
   },
   // SAM gold bars
@@ -240,7 +241,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 420,
     purity: "999",
     serialNumbered: true,
-    image: "/images/products/sam-silver-bar.jpg",
+    image: "/images/products/sam-silver-100g.webp",
     badges: ["Certified", "Assay sealed"],
   },
   {
@@ -255,7 +256,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 1950,
     purity: "999",
     serialNumbered: true,
-    image: "/images/products/sam-silver-bar.jpg",
+    image: "/images/products/sam-silver-500g.webp",
     badges: ["Certified", "Assay sealed"],
   },
   {
@@ -270,7 +271,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 3800,
     purity: "999",
     serialNumbered: true,
-    image: "/images/products/sam-silver-bar.jpg",
+    image: "/images/products/sam-silver-1kg.webp",
     badges: ["Certified", "Assay sealed", "Serial numbered"],
   },
 ];

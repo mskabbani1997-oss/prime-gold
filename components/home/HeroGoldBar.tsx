@@ -67,8 +67,8 @@ export function HeroGoldBar({
         {/* Back face — photoreal Valcambi assay certificate blister */}
         <div className="absolute inset-0 overflow-hidden rounded-[1.75rem] border border-pg-border-strong shadow-glow [backface-visibility:hidden] [transform:rotateY(180deg)]">
           <Image
-            src="/images/hero-bar-back.webp"
-            alt="Valcambi Suisse assay certificate — 1 g fine gold, Au 999.9"
+            src="/images/products/hero-bar-back.webp"
+            alt="Valcambi Suisse assay certificate — 1 oz fine gold, Au 999.9"
             fill
             sizes="(max-width: 1024px) 340px, 400px"
             className="object-cover"
