@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/cn";
-import { TreeOfLife } from "@/components/brand/TreeOfLife";
 
 /**
  * Cinematic gold-bar visual. On a slow auto-cadence the bar lifts (translateY +
@@ -11,10 +11,8 @@ import { TreeOfLife } from "@/components/brand/TreeOfLife";
  * highlight sweeps across the face as it turns. Static front-only under
  * prefers-reduced-motion.
  *
- * Back face is a designed assay-certificate card (Au 999.9, weight, serial).
- * NOTE: the brief called for a banana-generated Valcambi blister photo here;
- * image generation is unavailable on this machine (no Gemini key / free-tier
- * limit 0), so this is a hand-built, on-brand stand-in with the same elements.
+ * Back face is the photoreal Valcambi assay-certificate blister, generated via
+ * the banana/Gemini Nano Banana 2 pipeline (public/images/hero-bar-back.webp).
  */
 export function HeroGoldBar({
   front,
@@ -66,54 +64,15 @@ export function HeroGoldBar({
           )}
         </div>
 
-        {/* Back face — assay certificate */}
+        {/* Back face — photoreal Valcambi assay certificate blister */}
         <div className="absolute inset-0 overflow-hidden rounded-[1.75rem] border border-pg-border-strong shadow-glow [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <div className="relative flex h-full w-full flex-col bg-[linear-gradient(150deg,#f3d18a_0%,#d9a64a_42%,#b8862f_78%,#8a5a23_100%)] p-6 text-pg-ink">
-            {/* guilloché hairlines */}
-            <div
-              aria-hidden
-              className="absolute inset-0 opacity-[0.16] bg-[repeating-linear-gradient(135deg,rgba(42,29,12,0.6)_0,rgba(42,29,12,0.6)_1px,transparent_1px,transparent_7px)]"
-            />
-            {/* tree watermark */}
-            <TreeOfLife
-              strokeWidth={0.7}
-              className="pointer-events-none absolute -bottom-10 -right-8 h-56 w-56 text-pg-ink opacity-[0.12]"
-            />
-
-            <div className="relative flex items-center justify-between">
-              <span className="font-display text-lg font-semibold tracking-wide">
-                PRIME GOLD
-              </span>
-              <span className="grid h-9 w-9 place-items-center rounded-full border border-pg-ink/30">
-                <TreeOfLife strokeWidth={1.4} className="h-5 w-5 text-pg-ink" />
-              </span>
-            </div>
-
-            <div className="relative mt-auto">
-              <p className="text-[10px] font-medium uppercase tracking-luxe text-pg-ink/70">
-                Assay Certificate
-              </p>
-              <p className="mt-1 font-display text-4xl font-semibold leading-none">
-                Au 999.9
-              </p>
-              <p className="mt-1.5 text-sm font-medium text-pg-ink/80">
-                Fine Gold &middot; 1 oz / 31.1 g
-              </p>
-            </div>
-
-            <div className="relative mt-5 flex items-end justify-between border-t border-pg-ink/25 pt-3 text-[10px] uppercase tracking-wide text-pg-ink/70">
-              <span className="leading-relaxed">
-                Serial
-                <br />
-                <span className="tabular text-pg-ink">PG&middot;0007&middot;AU</span>
-              </span>
-              <span className="text-right leading-relaxed">
-                Swiss refined
-                <br />
-                LBMA good delivery
-              </span>
-            </div>
-          </div>
+          <Image
+            src="/images/hero-bar-back.webp"
+            alt="Valcambi Suisse assay certificate — 1 g fine gold, Au 999.9"
+            fill
+            sizes="(max-width: 1024px) 340px, 400px"
+            className="object-cover"
+          />
         </div>
       </motion.div>
     </div>
