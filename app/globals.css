@@ -2,26 +2,140 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   Prime Gold design tokens — bright, warm, rose-gold.
+   A warm champagne-ivory base grounded by deep espresso ink,
+   with rich antique gold and the logo's rose-gold accents.
+   Researched against the credible end of the bullion category
+   (Royal Mint, Perth Mint, Goldmoney) — light reads as trust.
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surfaces — warm champagne ivory, bright and premium */
+  --pg-bg: #faf4e8;
+  --pg-surface: #f4ead7;
+  --pg-card: #fffdf7;
+  --pg-card-hover: #f7eedd;
+
+  /* Rose-gold gradient DNA (kept from the logo) */
+  --pg-gold-champagne: #d4a94b;
+  --pg-gold-rose: #c08552;
+  --pg-gold-antique: #8a5a23;
+
+  /* Solid accent for small UI (rich antique gold, reads on cream) */
+  --pg-accent: #b8862f;
+
+  /* Ink that sits on top of gold fills (buttons, chips, selection) */
+  --pg-ink: #2a1d0c;
+
+  /* Text — warm espresso browns */
+  --pg-text: #2a211a;
+  --pg-text-muted: #6e5d49;
+  --pg-text-faint: #8f7b61;
+
+  /* Lines and glows — warm gold hairlines */
+  --pg-border: rgba(122, 90, 45, 0.16);
+  --pg-border-strong: rgba(184, 134, 47, 0.40);
+  --pg-glow: rgba(184, 134, 47, 0.20);
+
+  /* Status */
+  --pg-positive: #2f7d4f;
+  --pg-negative: #b4452f;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--pg-bg);
+    color: var(--pg-text);
+    font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), Georgia, serif;
+    color: var(--pg-text);
+    letter-spacing: -0.01em;
+  }
+
+  /* Numerals never jitter as live values change */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  ::selection {
+    background: var(--pg-gold-rose);
+    color: var(--pg-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--pg-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Warm scrollbar to match the theme */
+  * {
+    scrollbar-color: var(--pg-border-strong) transparent;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Page container with luxury gutters */
+  .pg-container {
+    width: 100%;
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .pg-container {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Gold gradient text, used sparingly at large sizes */
+  .text-gold-gradient {
+    background-image: linear-gradient(
+      135deg,
+      var(--pg-accent) 0%,
+      var(--pg-gold-rose) 48%,
+      var(--pg-gold-antique) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Hairline divider with a gold center fade, used between sections */
+  .pg-rule {
+    height: 1px;
+    border: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--pg-border-strong) 50%,
+      transparent
+    );
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
   }
 }
