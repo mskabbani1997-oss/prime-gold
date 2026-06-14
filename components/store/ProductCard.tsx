@@ -34,29 +34,24 @@ export function ProductCard({
           label={product.metal === "silver" ? "Silver bullion" : "Gold bullion"}
           sizes="(max-width: 768px) 50vw, 25vw"
         />
-        {product.serialNumbered && (
-          <span className="absolute left-3 top-3 rounded-full border border-pg-border-strong bg-pg-ink/70 px-2.5 py-1 text-[10px] uppercase tracking-wide text-pg-text backdrop-blur-sm">
-            Serial numbered
-          </span>
-        )}
       </Link>
 
-      <div className="flex flex-1 flex-col gap-3 p-4 sm:p-5">
-        <h3 className="font-display text-lg leading-tight text-pg-panel-ink">
+      <div className="flex flex-1 flex-col gap-2.5 p-3.5 sm:gap-3 sm:p-5">
+        <h3 className="font-display text-base leading-tight text-pg-panel-ink sm:text-lg">
           {product.name}
         </h3>
-        <div className="flex items-center gap-2 text-xs text-pg-panel-muted">
+        <div className="flex items-center gap-2 text-[11px] text-pg-panel-muted sm:text-xs">
           <span>{product.weightLabel}</span>
           <span aria-hidden>&middot;</span>
           <span>{product.purity} purity</span>
         </div>
 
-        <div className="mt-auto flex flex-col gap-3 pt-2">
+        <div className="mt-auto flex flex-col gap-2.5 pt-1 sm:gap-3 sm:pt-2">
           <div>
             <p className="text-[10px] uppercase tracking-wide text-pg-panel-muted">
               Price
             </p>
-            <p className="tabular font-sans text-xl font-semibold text-pg-panel-ink">
+            <p className="tabular font-sans text-lg font-semibold text-pg-panel-ink sm:text-xl">
               {formatAED(product.priceAED)}
             </p>
           </div>

@@ -47,8 +47,8 @@ export const COLLECTIONS: Collection[] = [
     name: "Valcambi Suisse",
     image: "/images/collection-valcambi.webp",
     story:
-      "Valcambi has refined precious metals in the Swiss canton of Ticino since 1961. Every bar leaves the refinery serial numbered, assay sealed, and accepted on the London market.",
-    signals: ["LBMA approved", "Swiss made", "Serial numbered"],
+      "Refining precious metals in Switzerland's Ticino since 1961. Every Valcambi bar leaves the refinery serial numbered, assay sealed, and LBMA Good Delivery accredited.",
+    signals: ["LBMA Good Delivery", "Swiss made", "Serial numbered"],
   },
   {
     slug: "sam-precious-metals",

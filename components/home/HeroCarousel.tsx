@@ -41,7 +41,7 @@ export function HeroCarousel({
 
   useEffect(() => {
     if (reduce || paused || n <= 1) return;
-    const id = setInterval(() => setActive((a) => (a + 1) % n), 4200);
+    const id = setInterval(() => setActive((a) => (a + 1) % n), 2600);
     return () => clearInterval(id);
   }, [reduce, paused, n]);
 
@@ -55,7 +55,7 @@ export function HeroCarousel({
     return d;
   };
 
-  const spread = isMobile ? 96 : 230;
+  const spread = isMobile ? 104 : 250;
   const ease = [0.4, 0, 0.2, 1] as const;
 
   return (
@@ -69,9 +69,11 @@ export function HeroCarousel({
           const d = rel(i);
           const abs = Math.abs(d);
           const visible = abs <= 2;
-          const scale = d === 0 ? 1 : abs === 1 ? 0.72 : 0.54;
-          const blur = d === 0 ? 0 : abs === 1 ? 3 : 6;
-          const opacity = !visible ? 0 : d === 0 ? 1 : abs === 1 ? 0.65 : 0.28;
+          // strong center emphasis: the active product pops forward (>1) and
+          // sharp; neighbours shrink + blur hard for dramatic depth.
+          const scale = d === 0 ? 1.18 : abs === 1 ? 0.6 : 0.42;
+          const blur = d === 0 ? 0 : abs === 1 ? 5 : 9;
+          const opacity = !visible ? 0 : d === 0 ? 1 : abs === 1 ? 0.5 : 0.22;
           const x = d * spread;
           return (
             <motion.div
@@ -100,7 +102,12 @@ export function HeroCarousel({
                   fill
                   sizes="(max-width: 640px) 180px, 290px"
                   priority={i === 0}
-                  className="object-contain drop-shadow-[0_30px_55px_rgba(0,0,0,0.6)]"
+                  className={cn(
+                    "object-contain",
+                    d === 0
+                      ? "drop-shadow-[0_45px_75px_rgba(0,0,0,0.72)]"
+                      : "drop-shadow-[0_18px_38px_rgba(0,0,0,0.5)]"
+                  )}
                 />
               </div>
             </motion.div>

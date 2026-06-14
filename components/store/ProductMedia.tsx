@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { ArrowsLeftRight } from "@phosphor-icons/react";
 import { BrandImage } from "@/components/ui/BrandImage";
 import { cn } from "@/lib/cn";
 
@@ -52,7 +53,7 @@ export function ProductMedia({
           "absolute inset-0 bg-transparent transition-opacity duration-500 ease-luxe",
           revealed && hasReveal ? "opacity-0" : "opacity-100"
         )}
-        imgClassName="object-contain p-5"
+        imgClassName="object-contain p-3 sm:p-5"
       />
       {hasReveal && (
         <BrandImage
@@ -63,13 +64,30 @@ export function ProductMedia({
             "absolute inset-0 bg-transparent transition-opacity duration-500 ease-luxe",
             revealed ? "opacity-100" : "opacity-0"
           )}
-          imgClassName="object-contain p-5"
+          imgClassName="object-contain p-3 sm:p-5"
         />
       )}
       {hasReveal && (
-        <span className="pointer-events-none absolute bottom-3 right-3 rounded-full bg-pg-ink/70 px-2 py-1 text-[9px] uppercase tracking-wide text-pg-text backdrop-blur-sm sm:hidden">
-          Swipe
-        </span>
+        <div className="pointer-events-none absolute inset-x-0 bottom-3 flex items-center justify-center gap-2 sm:hidden">
+          <span className="inline-flex items-center gap-1 rounded-full bg-pg-ink/75 px-2.5 py-1 text-[9px] font-medium uppercase tracking-wide text-pg-text backdrop-blur-sm">
+            <ArrowsLeftRight size={11} weight="bold" />
+            Swipe
+          </span>
+          <span className="flex items-center gap-1">
+            <span
+              className={cn(
+                "h-1.5 w-1.5 rounded-full transition-colors",
+                revealed ? "bg-pg-text/30" : "bg-pg-accent"
+              )}
+            />
+            <span
+              className={cn(
+                "h-1.5 w-1.5 rounded-full transition-colors",
+                revealed ? "bg-pg-accent" : "bg-pg-text/30"
+              )}
+            />
+          </span>
+        </div>
       )}
     </div>
   );

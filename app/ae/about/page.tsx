@@ -76,7 +76,7 @@ export default function AboutPage() {
       />
 
       {/* Who we are */}
-      <section className="pg-container py-20 lg:py-28">
+      <section className="pg-container py-14 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeading title="Who we are" />
           <Reveal className="max-w-prose space-y-4 text-pretty leading-relaxed text-pg-text-muted">
@@ -96,10 +96,10 @@ export default function AboutPage() {
       </section>
 
       {/* Why invest */}
-      <section className="bg-pg-surface py-20 lg:py-28">
+      <section className="bg-pg-surface py-14 lg:py-20">
         <div className="pg-container">
           <SectionHeading title="Why invest with us" align="center" />
-          <RevealGroup className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <RevealGroup className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map(({ Icon, title, body }) => (
               <RevealItem key={title}>
                 <div className="h-full rounded-2xl border border-pg-border bg-pg-card p-7">
@@ -116,9 +116,9 @@ export default function AboutPage() {
       </section>
 
       {/* Services */}
-      <section className="pg-container py-20 lg:py-28">
+      <section className="pg-container py-14 lg:py-20">
         <SectionHeading title="Our services" />
-        <RevealGroup className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map(({ Icon, title, body }) => (
             <RevealItem key={title}>
               <div className="group flex h-full gap-4 rounded-2xl border border-pg-border bg-pg-card p-6 transition-colors hover:border-pg-border-strong">
@@ -136,10 +136,10 @@ export default function AboutPage() {
       </section>
 
       {/* Commitment */}
-      <section className="bg-pg-surface py-20 lg:py-28">
+      <section className="bg-pg-surface py-14 lg:py-20">
         <div className="pg-container">
           <SectionHeading title="Our commitment" align="center" />
-          <RevealGroup className="mt-12 grid gap-5 md:grid-cols-3">
+          <RevealGroup className="mt-10 grid gap-5 md:grid-cols-3">
             {COMMITMENTS.map((c) => (
               <RevealItem key={c.title}>
                 <div className="h-full rounded-2xl border border-pg-border bg-pg-card p-8">
