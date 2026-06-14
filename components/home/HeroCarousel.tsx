@@ -55,7 +55,7 @@ export function HeroCarousel({
     return d;
   };
 
-  const spread = isMobile ? 116 : 230;
+  const spread = isMobile ? 96 : 230;
   const ease = [0.4, 0, 0.2, 1] as const;
 
   return (

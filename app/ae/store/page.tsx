@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { StoreView } from "@/components/store/StoreView";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getAllProducts } from "@/lib/data";
-import { pageMeta, breadcrumbJsonLd, itemListJsonLd } from "@/lib/seo";
+import { pageMeta, breadcrumbJsonLd, itemListJsonLd, productJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
   title: "Buy Gold Bars & Coins in UAE | Prime Gold Bullion Store",
@@ -29,6 +29,7 @@ export default function StorePage() {
             url: "https://primegoldshop.com/ae/store",
           },
           itemListJsonLd(products, "/ae/store"),
+          ...products.map((p) => productJsonLd(p, "/ae/store")),
         ]}
       />
 

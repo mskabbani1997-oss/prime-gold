@@ -52,7 +52,7 @@ export function Hero() {
                 Gold bullion &middot; UAE &amp; Lebanon
               </p>
             </Reveal>
-            <h1 className="font-display text-5xl font-semibold leading-[1.04] md:text-6xl lg:text-7xl">
+            <h1 className="font-display text-4xl font-semibold leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
               <ClipReveal>Your trusted partner in</ClipReveal>
               <ClipReveal delay={0.08}>
                 <span className="text-gold-gradient italic">gold investment</span>
