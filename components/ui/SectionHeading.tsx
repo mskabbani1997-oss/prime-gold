@@ -1,4 +1,4 @@
-import { Reveal } from "./Reveal";
+import { Reveal, ClipReveal } from "./Reveal";
 import { cn } from "@/lib/cn";
 
 /**
@@ -19,7 +19,7 @@ export function SectionHeading({
   className?: string;
 }) {
   return (
-    <Reveal
+    <div
       className={cn(
         "max-w-2xl",
         align === "center" && "mx-auto text-center",
@@ -27,24 +27,28 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (
-        <p className="mb-4 text-[11px] uppercase tracking-luxe text-pg-text-faint">
-          {eyebrow}
-        </p>
+        <Reveal>
+          <p className="mb-4 text-[11px] uppercase tracking-luxe text-pg-text-faint">
+            {eyebrow}
+          </p>
+        </Reveal>
       )}
-      <h2 className="text-balance font-display text-3xl font-semibold leading-tight md:text-5xl">
-        {title}
+      <h2 className="font-display text-3xl font-semibold leading-tight md:text-5xl">
+        <ClipReveal>{title}</ClipReveal>
       </h2>
       {intro && (
-        <p
-          className={cn(
-            "mt-5 text-pretty leading-relaxed text-pg-text-muted",
-            align === "center" && "mx-auto",
-            "max-w-prose"
-          )}
-        >
-          {intro}
-        </p>
+        <Reveal delay={0.1}>
+          <p
+            className={cn(
+              "mt-5 text-pretty leading-relaxed text-pg-text-muted",
+              align === "center" && "mx-auto",
+              "max-w-prose"
+            )}
+          >
+            {intro}
+          </p>
+        </Reveal>
       )}
-    </Reveal>
+    </div>
   );
 }
