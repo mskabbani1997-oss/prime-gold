@@ -92,7 +92,7 @@ export function GoldParticles({
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", onResize);
     };
-  }, [reduce]);
+  }, [reduce, count]);
 
   return <canvas ref={ref} aria-hidden className={cn("h-full w-full", className)} />;
 }
