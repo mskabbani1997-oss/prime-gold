@@ -32,7 +32,7 @@ const PILLARS = [
 ];
 
 const SERVICES = [
-  { Icon: Coins, title: "Gold purchase", body: "Buy certified bars and coins at honest, spot-linked prices in AED." },
+  { Icon: Coins, title: "Gold purchase", body: "Buy certified bars and coins priced live against the spot market in AED." },
   { Icon: Vault, title: "Storage solutions", body: "Keep your holding in insured, vault-grade storage with full records." },
   { Icon: HandCoins, title: "Sellback and liquidity", body: "Sell your gold back to us when you need to, at fair market value." },
   { Icon: ChatsCircle, title: "Expert guidance", body: "Talk to people who know the market before you commit a single dirham." },

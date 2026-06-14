@@ -60,8 +60,8 @@ export function Hero() {
             </h1>
             <Reveal delay={0.2}>
               <p className="mt-6 max-w-md text-pretty leading-relaxed text-pg-text-muted">
-                Certified Swiss and regional bullion with honest, spot-linked pricing,
-                insured storage, and safe delivery across the UAE and Lebanon.
+                Certified Swiss and regional bullion, priced live against the global spot
+                market &mdash; insured storage and safe delivery across the UAE and Lebanon.
               </p>
             </Reveal>
             <Reveal delay={0.28}>

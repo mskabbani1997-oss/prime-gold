@@ -13,7 +13,7 @@ export const SITE = {
   home: "/ae",
   tagline: "Your trusted partner in gold investment",
   description:
-    "Buy certified gold bars and coins in the UAE with transparent pricing, insured storage, and safe delivery across Dubai and Lebanon.",
+    "Buy certified gold bars and coins in the UAE, priced live against the global spot market, with insured storage and safe delivery across Dubai and Lebanon.",
 
   contact: {
     phone: "+961 70 882 983",

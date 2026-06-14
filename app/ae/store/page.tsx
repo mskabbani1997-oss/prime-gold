@@ -39,8 +39,9 @@ export default function StorePage() {
           Buy gold bars and coins in the UAE
         </h1>
         <p className="mt-5 max-w-prose text-pretty leading-relaxed text-pg-text-muted">
-          Browse certified gold and silver bullion with honest, spot-linked AED pricing.
-          Filter by category, collection, metal, and budget to find the right holding.
+          Browse certified gold and silver bullion, priced live against the global spot
+          market in AED. Filter by category, collection, metal, and budget to find the
+          right holding.
         </p>
       </section>
 

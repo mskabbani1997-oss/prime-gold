@@ -12,7 +12,7 @@ const PILLARS = [
   {
     Icon: ChartLineUp,
     title: "Transparent pricing",
-    body: "Live, honest pricing tied to the spot market. You see exactly what you pay, with no hidden premiums.",
+    body: "Live pricing tied to the global spot market. You see exactly what you pay, with no hidden premiums.",
   },
   {
     Icon: Package,
