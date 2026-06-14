@@ -24,6 +24,8 @@ export interface Product {
   serialNumbered: boolean;
   /** Path under /public/images. Falls back to the category image until a product shot exists. */
   image: string;
+  /** Optional second image (packaging / assay card) shown on hover (desktop) or swipe (mobile). */
+  revealImage?: string;
   badges: string[];
 }
 

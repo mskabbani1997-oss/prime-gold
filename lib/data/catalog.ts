@@ -7,10 +7,11 @@ import type { Category, Collection, Product } from "./types";
  * flagged for client confirmation before go-live. Swap this module for a real
  * pricing API and the components stay unchanged.
  *
- * Images: one representative real product image per brand + size-class
- * (small minted bar / large bar / coin / silver). NOTE: the files currently in
- * /public/images/products are INTERIM placeholders — replace with real,
- * serial-cleaned manufacturer photography (Valcambi / SAM) before launch.
+ * Images: the client's OWN real product photos, pulled from their production
+ * store (primegoldshop.com) via scripts/fetch_store_images.py + wired by
+ * scripts/wire_product_images.py. Each SKU has <slug>.webp (primary/card) and
+ * most have <slug>-pack.webp (packaging, shown on hover/swipe). Used as-is —
+ * re-encoded to webp for consistency only, no AI and no editing.
  */
 
 export const CATEGORIES: Category[] = [
@@ -59,17 +60,6 @@ export const COLLECTIONS: Collection[] = [
   },
 ];
 
-// Representative images per brand + size-class (interim placeholders).
-const IMG = {
-  valcambiSmall: "/images/products/valcambi-1g.webp",
-  valcambiMid: "/images/products/valcambi-20g.webp",
-  valcambiLarge: "/images/products/valcambi-1oz.webp",
-  samBar: "/images/products/sam-gold-bar.webp",
-  armillaryCoin: "/images/products/valcambi-round.webp",
-  samCoin: "/images/products/sam-gold-coin.webp",
-  samSilver: "/images/products/sam-silver-1kg.webp",
-} as const;
-
 const VALCAMBI_BADGES = ["LBMA approved", "Swiss made"];
 const SAM_BADGES = ["UAE refined", "Assay sealed"];
 
@@ -102,13 +92,6 @@ const WEIGHT_G: Record<string, number> = {
   "1 kg": 1000,
 };
 
-function valcambiImage(label: string): string {
-  const g = WEIGHT_G[label];
-  if (g >= 250) return IMG.valcambiLarge;
-  if (g >= 50) return IMG.valcambiMid;
-  return IMG.valcambiSmall;
-}
-
 function goldBar(
   brand: "valcambi" | "sam",
   label: string
@@ -117,9 +100,10 @@ function goldBar(
   const slugBrand = isV ? "valcambi" : "sam";
   const nameBrand = isV ? "Valcambi" : "SAM";
   const key = label.replace(/[^0-9a-z]/gi, "").toLowerCase();
+  const slug = `${slugBrand}-gold-bar-${key}`;
   return {
     id: `${slugBrand}-gb-${key}`,
-    slug: `${slugBrand}-gold-bar-${key}`,
+    slug,
     name: `${nameBrand} Gold Bar ${label}`,
     metal: "gold",
     category: "gold-bars",
@@ -129,7 +113,8 @@ function goldBar(
     priceAED: GOLD_PRICE[label],
     purity: "999.9",
     serialNumbered: true,
-    image: isV ? valcambiImage(label) : IMG.samBar,
+    image: `/images/products/${slug}.webp`,
+    revealImage: `/images/products/${slug}-pack.webp`,
     badges: isV ? VALCAMBI_BADGES : SAM_BADGES,
   };
 }
@@ -153,7 +138,8 @@ export const PRODUCTS: Product[] = [
     priceAED: 18000,
     purity: "999.9",
     serialNumbered: false,
-    image: IMG.armillaryCoin,
+    image: "/images/products/armillary-gold-coin-1oz.webp",
+    revealImage: "/images/products/armillary-gold-coin-1oz-pack.webp",
     badges: ["Investment grade", "Limited mintage"],
   },
   {
@@ -168,7 +154,8 @@ export const PRODUCTS: Product[] = [
     priceAED: 15900,
     purity: "999.9",
     serialNumbered: false,
-    image: IMG.samCoin,
+    image: "/images/products/sam-gold-coin-1oz.webp",
+    revealImage: "/images/products/sam-gold-coin-1oz-pack.webp",
     badges: ["UAE refined", "Certified"],
   },
   // Silver
@@ -184,7 +171,7 @@ export const PRODUCTS: Product[] = [
     priceAED: 3850,
     purity: "999",
     serialNumbered: true,
-    image: IMG.samSilver,
+    image: "/images/products/sam-silver-bar-1kg.webp",
     badges: ["UAE refined", "Assay sealed"],
   },
 ];

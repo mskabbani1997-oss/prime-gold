@@ -1,0 +1,266 @@
+{
+  "1g-minted-gold-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752578064428-1image%20(12).webp",
+      "file": "live-1g-minted-gold-bar-primary.webp",
+      "bytes": 64638
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734092601546-mintedrectangular_pack_1g_3d_r_800_20130110.png",
+      "file": "live-1g-minted-gold-bar-reveal.png",
+      "bytes": 133459
+    }
+  },
+  "250g-minted-gold-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752578026274-1image%20(11).webp",
+      "file": "live-250g-minted-gold-bar-primary.webp",
+      "bytes": 63980
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734092864537-mintedrectangular_pack_2-5g_3d_r_800_20130110.jpg",
+      "file": "live-250g-minted-gold-bar-reveal.jpg",
+      "bytes": 48249
+    }
+  },
+  "5g-minted-gold-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752577990927-1image%20(10).webp",
+      "file": "live-5g-minted-gold-bar-primary.webp",
+      "bytes": 63514
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734093499616-mintedrectangular_pack_5g_3d_a_800_20130110.png",
+      "file": "live-5g-minted-gold-bar-reveal.png",
+      "bytes": 140040
+    }
+  },
+  "10g-minted-gold-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752577956513-1image%20(9).webp",
+      "file": "live-10g-minted-gold-bar-primary.webp",
+      "bytes": 63642
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734093547016-mintedrectangular_pack_10g_3d_r_800_20130110.png",
+      "file": "live-10g-minted-gold-bar-reveal.png",
+      "bytes": 144042
+    }
+  },
+  "20g-minted-gold-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752577910799-1image%20(8).webp",
+      "file": "live-20g-minted-gold-bar-primary.webp",
+      "bytes": 63846
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734093591035-mintedrectangular_pack_20g_3d_r_800_20130110.png",
+      "file": "live-20g-minted-gold-bar-reveal.png",
+      "bytes": 133253
+    }
+  },
+  "1oz-minted-gold-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752577845532-1image%20(8).webp",
+      "file": "live-1oz-minted-gold-bar-primary.webp",
+      "bytes": 62618
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734093753189-mintedrectangular_pack_1oz_3d_r_800_20130110.png",
+      "file": "live-1oz-minted-gold-bar-reveal.png",
+      "bytes": 128795
+    }
+  },
+  "50g-minted-gold-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752577139204-1image%20(7).webp",
+      "file": "live-50g-minted-gold-bar-primary.webp",
+      "bytes": 62986
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734093821493-mintedrectangular_pack_50g_3d_a_800_20130110.jpg",
+      "file": "live-50g-minted-gold-bar-reveal.jpg",
+      "bytes": 82362
+    }
+  },
+  "100g-minted-gold-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752577105356-1image%20(6).webp",
+      "file": "live-100g-minted-gold-bar-primary.webp",
+      "bytes": 63268
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734093862674-mintedrectangular_pack_100g_3d_r_800_20130110.png",
+      "file": "live-100g-minted-gold-bar-reveal.png",
+      "bytes": 123219
+    }
+  },
+  "250g-minted-gold-bar-valcambi": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752577070779-1image%20(5).webp",
+      "file": "live-250g-minted-gold-bar-valcambi-primary.webp",
+      "bytes": 62762
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734093948221-minted-rectangular_250g_3d_a_800_20130110_01.png",
+      "file": "live-250g-minted-gold-bar-valcambi-reveal.png",
+      "bytes": 103177
+    }
+  },
+  "500g-minted-gold-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752577015324-1image%20(4).webp",
+      "file": "live-500g-minted-gold-bar-primary.webp",
+      "bytes": 55224
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1757609634024-4_MintedBars_500g_Au_9999_Front_P.jpg",
+      "file": "live-500g-minted-gold-bar-reveal.jpg",
+      "bytes": 285885
+    }
+  },
+  "1kg-minted-gold-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752576971223-1image%20(3).webp",
+      "file": "live-1kg-minted-gold-bar-primary.webp",
+      "bytes": 55046
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1757609647923-4_MintedBars_1kg_Au_9999_Front_P.jpg",
+      "file": "live-1kg-minted-gold-bar-reveal.jpg",
+      "bytes": 282330
+    }
+  },
+  "1oz-armillary-coins": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752576906435-image%20(8).webp",
+      "file": "live-1oz-armillary-coins-primary.webp",
+      "bytes": 129330
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734094259426-combiround_au_1oz_fronte_2d_sfondo1_web.jpg",
+      "file": "live-1oz-armillary-coins-reveal.jpg",
+      "bytes": 73890
+    }
+  },
+  "1oz-gold-coin-sam": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1734095609650-1Ounce_1e8d86a6-1602-43c0-b427-bdd52ee76056.webp",
+      "file": "live-1oz-gold-coin-sam-primary.webp",
+      "bytes": 56456
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1759253116886-01-SAM-Logo-Coin.webp",
+      "file": "live-1oz-gold-coin-sam-reveal.webp",
+      "bytes": 40198
+    }
+  },
+  "100g-minted-gold-bar-sam": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752575594905-image100.webp",
+      "file": "live-100g-minted-gold-bar-sam-primary.webp",
+      "bytes": 50480
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734095474010-01-SAMLogoMintedBars_100gms.webp",
+      "file": "live-100g-minted-gold-bar-sam-reveal.webp",
+      "bytes": 71888
+    }
+  },
+  "50g-minted-gold-bar-sam": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752576532819-image%20(1).webp",
+      "file": "live-50g-minted-gold-bar-sam-primary.webp",
+      "bytes": 49378
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734095428240-01-SAMLogoMintedBars_100gms.webp",
+      "file": "live-50g-minted-gold-bar-sam-reveal.webp",
+      "bytes": 71888
+    }
+  },
+  "1oz-minted-gold-bar-sam": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752576580425-image%20(2).webp",
+      "file": "live-1oz-minted-gold-bar-sam-primary.webp",
+      "bytes": 41668
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734095375872-01-SAMLogoMintedBars_100gms.webp",
+      "file": "live-1oz-minted-gold-bar-sam-reveal.webp",
+      "bytes": 71888
+    }
+  },
+  "20g-minted-gold-bar-sam": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752576609071-image%20(3).webp",
+      "file": "live-20g-minted-gold-bar-sam-primary.webp",
+      "bytes": 49468
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734095328192-01-SAMLogoMintedBars_100gms.webp",
+      "file": "live-20g-minted-gold-bar-sam-reveal.webp",
+      "bytes": 71888
+    }
+  },
+  "10g-minted-gold-bar-sam": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752576641884-image%20(4).webp",
+      "file": "live-10g-minted-gold-bar-sam-primary.webp",
+      "bytes": 46672
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734095259100-01-SAMLogoMintedBars_100gms.webp",
+      "file": "live-10g-minted-gold-bar-sam-reveal.webp",
+      "bytes": 71888
+    }
+  },
+  "5g-minted-gold-bar-sam": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752576690093-image%20(5).webp",
+      "file": "live-5g-minted-gold-bar-sam-primary.webp",
+      "bytes": 47504
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1757609955598-1734095474010-01-SAMLogoMintedBars_100gms.webp",
+      "file": "live-5g-minted-gold-bar-sam-reveal.webp",
+      "bytes": 42718
+    }
+  },
+  "2-5g-minted-gold-bar-sam": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1752576720326-image%20(6).webp",
+      "file": "live-2-5g-minted-gold-bar-sam-primary.webp",
+      "bytes": 49488
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734094764218-01-SAMLogoMintedBars_100gms.webp",
+      "file": "live-2-5g-minted-gold-bar-sam-reveal.webp",
+      "bytes": 71888
+    }
+  },
+  "1g-minted-gold-bar-sam": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1734094600397-1Gram.webp",
+      "file": "live-1g-minted-gold-bar-sam-primary.webp",
+      "bytes": 30740
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1734094600402-01-SAMLogoMintedBars_100gms.webp",
+      "file": "live-1g-minted-gold-bar-sam-reveal.webp",
+      "bytes": 71888
+    }
+  },
+  "1kg-minted-silver-bar": {
+    "primary": {
+      "url": "https://backend.primegoldshop.com/static/1762703198399-SAM-Casted-Silver-1kg.webp",
+      "file": "live-1kg-minted-silver-bar-primary.webp",
+      "bytes": 3702
+    },
+    "reveal": {
+      "url": "https://backend.primegoldshop.com/static/1762703198403-01-SAM-Logo-Bar-Rectangle.png",
+      "file": "live-1kg-minted-silver-bar-reveal.png",
+      "bytes": 48449
+    }
+  }
+}

@@ -13,8 +13,17 @@ interface Particle {
   a: number;
 }
 
-/** Slow rose-gold dust drifting in vault light. Static (empty) under reduced motion. */
-export function GoldParticles({ className }: { className?: string }) {
+/**
+ * Slow gold dust drifting in vault light. Static (empty) under reduced motion.
+ * Pass `count` for a sparse field when used as background texture.
+ */
+export function GoldParticles({
+  className,
+  count,
+}: {
+  className?: string;
+  count?: number;
+}) {
   const ref = useRef<HTMLCanvasElement>(null);
   const reduce = useReducedMotion();
 
@@ -30,7 +39,7 @@ export function GoldParticles({ className }: { className?: string }) {
     let h = 0;
     let raf = 0;
     let particles: Particle[] = [];
-    const count = window.innerWidth < 768 ? 26 : 64;
+    const num = count ?? (window.innerWidth < 768 ? 26 : 64);
 
     const resize = () => {
       w = canvas.clientWidth;
@@ -40,7 +49,7 @@ export function GoldParticles({ className }: { className?: string }) {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
     const seed = () => {
-      particles = Array.from({ length: count }, () => ({
+      particles = Array.from({ length: num }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
         r: Math.random() * 1.5 + 0.4,
