@@ -3,43 +3,50 @@
 @tailwind utilities;
 
 /* ============================================================
-   Prime Gold design tokens — bright, warm, rose-gold.
-   A warm champagne-ivory base grounded by deep espresso ink,
-   with rich antique gold and the logo's rose-gold accents.
-   Researched against the credible end of the bullion category
-   (Royal Mint, Perth Mint, Goldmoney) — light reads as trust.
+   Prime Gold design tokens — deep navy + gold (brand identity
+   from @primegold.lb). Navy base for hero/bands/footer, gold
+   accent + cream serif headlines, gold-dust + tree watermark.
+   Light "panel" tokens carry the product grid (bars read best
+   on light cards) — the brand is a navy/gold MIX, not full-navy.
    ============================================================ */
 :root {
-  /* Surfaces — warm champagne ivory, bright and premium */
-  --pg-bg: #faf4e8;
-  --pg-surface: #f4ead7;
-  --pg-card: #fffdf7;
-  --pg-card-hover: #f7eedd;
+  /* Surfaces — deep brand navy */
+  --pg-bg: #0a1322;
+  --pg-surface: #0e1b30;
+  --pg-card: #14233b;
+  --pg-card-hover: #1b2e4c;
 
-  /* Rose-gold gradient DNA (kept from the logo) */
-  --pg-gold-champagne: #d4a94b;
-  --pg-gold-rose: #c08552;
-  --pg-gold-antique: #8a5a23;
+  /* Gold gradient family (bright enough to read on navy) */
+  --pg-gold-champagne: #f0d293;
+  --pg-gold-rose: #dcb368;
+  --pg-gold-antique: #b7892f;
 
-  /* Solid accent for small UI (rich antique gold, reads on cream) */
-  --pg-accent: #b8862f;
+  /* Solid gold accent for small UI on navy */
+  --pg-accent: #cda24a;
 
   /* Ink that sits on top of gold fills (buttons, chips, selection) */
-  --pg-ink: #2a1d0c;
+  --pg-ink: #0a1322;
 
-  /* Text — warm espresso browns */
-  --pg-text: #2a211a;
-  --pg-text-muted: #6e5d49;
-  --pg-text-faint: #8f7b61;
+  /* Text — warm cream on navy */
+  --pg-text: #f4ecdb;
+  --pg-text-muted: #b3bdcd;
+  --pg-text-faint: #8493a8;
 
-  /* Lines and glows — warm gold hairlines */
-  --pg-border: rgba(122, 90, 45, 0.16);
-  --pg-border-strong: rgba(184, 134, 47, 0.40);
-  --pg-glow: rgba(184, 134, 47, 0.20);
+  /* Light product panel (gold reads best on light cards) */
+  --pg-panel: #f6efe1;
+  --pg-panel-card: #fffdf8;
+  --pg-panel-ink: #1a2233;
+  --pg-panel-muted: #5d6679;
+  --pg-panel-border: rgba(20, 32, 58, 0.12);
+
+  /* Lines and glows — gold hairlines on navy */
+  --pg-border: rgba(205, 162, 74, 0.18);
+  --pg-border-strong: rgba(205, 162, 74, 0.42);
+  --pg-glow: rgba(205, 162, 74, 0.24);
 
   /* Status */
-  --pg-positive: #2f7d4f;
-  --pg-negative: #b4452f;
+  --pg-positive: #5fbf8a;
+  --pg-negative: #e08a7a;
 }
 
 @layer base {

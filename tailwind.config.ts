@@ -23,6 +23,11 @@ const config: Config = {
           text: "var(--pg-text)",
           "text-muted": "var(--pg-text-muted)",
           "text-faint": "var(--pg-text-faint)",
+          panel: "var(--pg-panel)",
+          "panel-card": "var(--pg-panel-card)",
+          "panel-ink": "var(--pg-panel-ink)",
+          "panel-muted": "var(--pg-panel-muted)",
+          "panel-border": "var(--pg-panel-border)",
           border: "var(--pg-border)",
           "border-strong": "var(--pg-border-strong)",
           positive: "var(--pg-positive)",
@@ -43,14 +48,16 @@ const config: Config = {
       },
       backgroundImage: {
         "gold-grad":
-          "linear-gradient(135deg, #f2d488 0%, #d4a94b 40%, #b8862f 72%, #936b22 100%)",
+          "linear-gradient(135deg, #f6dc96 0%, #e0bd6f 38%, #cda24a 70%, #a87f2c 100%)",
         "gold-sheen":
-          "linear-gradient(120deg, transparent 30%, rgba(255,248,225,0.7) 50%, transparent 70%)",
+          "linear-gradient(120deg, transparent 30%, rgba(255,244,214,0.75) 50%, transparent 70%)",
       },
       boxShadow: {
-        card: "0 18px 50px -24px rgba(90,64,20,0.30)",
-        "card-hover": "0 28px 70px -28px rgba(90,64,20,0.40)",
-        glow: "0 0 0 1px rgba(184,134,47,0.20), 0 14px 50px -12px rgba(184,134,47,0.40)",
+        card: "0 22px 60px -26px rgba(0,0,0,0.55)",
+        "card-hover": "0 32px 80px -30px rgba(0,0,0,0.62)",
+        glow: "0 0 0 1px rgba(205,162,74,0.22), 0 14px 50px -12px rgba(205,162,74,0.42)",
+        panel: "0 24px 60px -28px rgba(0,0,0,0.45)",
+        "panel-hover": "0 36px 90px -32px rgba(0,0,0,0.55)",
       },
       letterSpacing: {
         luxe: "0.22em",

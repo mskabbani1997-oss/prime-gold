@@ -10,7 +10,6 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { Logo } from "@/components/brand/Logo";
 import { TreeWatermark } from "@/components/brand/TreeWatermark";
-import { NewsletterForm } from "./NewsletterForm";
 import { FOOTER_SECTIONS, SITE } from "@/lib/site";
 
 const socials = [
@@ -69,20 +68,6 @@ export function Footer() {
               </ul>
             </div>
           ))}
-        </div>
-
-        <hr className="pg-rule my-12" />
-
-        <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-center">
-          <div>
-            <h3 className="font-display text-2xl text-pg-text">
-              Stay ahead in the gold market
-            </h3>
-            <p className="mt-2 text-sm text-pg-text-muted">
-              Market notes and new releases, sent when they matter.
-            </p>
-          </div>
-          <NewsletterForm compact />
         </div>
 
         <hr className="pg-rule my-12" />

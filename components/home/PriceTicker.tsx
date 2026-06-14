@@ -19,12 +19,12 @@ export function PriceTicker({ className }: { className?: string }) {
       )}
     >
       {/* edge fades */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-pg-bg to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-pg-bg to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-pg-bg to-transparent sm:w-16" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-pg-bg to-transparent sm:w-16" />
 
       <ul
         aria-hidden
-        className="flex w-max animate-marquee items-center gap-10 py-3.5 group-hover:[animation-play-state:paused] motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center"
+        className="flex w-max animate-marquee items-center gap-6 py-3 sm:gap-10 sm:py-3.5 group-hover:[animation-play-state:paused] motion-reduce:w-full motion-reduce:animate-none motion-reduce:flex-wrap motion-reduce:justify-center motion-reduce:gap-x-6 motion-reduce:gap-y-2"
       >
         {items.map((item, i) => {
           const up = item.change >= 0;

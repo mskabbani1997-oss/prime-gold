@@ -20,7 +20,7 @@ export function TreeWatermark({
       aria-hidden
       className={cn("pointer-events-none absolute select-none", className)}
     >
-      <LogoTreeMark className={cn("h-full w-full text-pg-antique", opacity)} />
+      <LogoTreeMark className={cn("h-full w-full text-pg-accent", opacity)} />
     </div>
   );
 }

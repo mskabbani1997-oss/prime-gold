@@ -61,8 +61,8 @@ export function GoldParticles({ className }: { className?: string }) {
         if (p.x < -6) p.x = w + 6;
         if (p.x > w + 6) p.x = -6;
         const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3);
-        grd.addColorStop(0, `rgba(184,134,47,${p.a})`);
-        grd.addColorStop(1, "rgba(184,134,47,0)");
+        grd.addColorStop(0, `rgba(212,175,90,${p.a})`);
+        grd.addColorStop(1, "rgba(212,175,90,0)");
         ctx.fillStyle = grd;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);

@@ -27,21 +27,27 @@ export function AddToCartButton({
         setTimeout(() => setAdded(false), 1600);
       }}
       className={cn(
-        "inline-flex h-10 items-center justify-center gap-1.5 rounded-full border border-pg-border-strong bg-pg-card/60 px-4 text-xs font-medium text-pg-text transition-all duration-300 ease-luxe hover:border-pg-rose hover:bg-pg-card-hover active:scale-[0.97]",
+        "group/cta relative inline-flex h-11 items-center justify-center gap-1.5 overflow-hidden rounded-full bg-gold-grad px-5 text-xs font-semibold uppercase tracking-wide text-pg-ink shadow-glow transition-all duration-300 ease-luxe hover:shadow-[0_0_0_1px_rgba(205,162,74,0.45),0_14px_50px_-10px_rgba(205,162,74,0.55)] active:scale-[0.97]",
         className
       )}
     >
-      {added ? (
-        <>
-          <Check size={14} weight="bold" className="text-pg-positive" />
-          Added
-        </>
-      ) : (
-        <>
-          <Plus size={14} weight="bold" />
-          Add to cart
-        </>
-      )}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -translate-x-full bg-gold-sheen opacity-80 transition-transform duration-[800ms] ease-luxe group-hover/cta:translate-x-full motion-reduce:hidden"
+      />
+      <span className="relative z-10 inline-flex items-center gap-1.5">
+        {added ? (
+          <>
+            <Check size={14} weight="bold" />
+            Added
+          </>
+        ) : (
+          <>
+            <Plus size={14} weight="bold" />
+            Add to cart
+          </>
+        )}
+      </span>
     </button>
   );
 }
