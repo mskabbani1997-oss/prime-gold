@@ -60,9 +60,8 @@ export function Hero() {
             </h1>
             <Reveal delay={0.14}>
               <p className="mt-5 max-w-md text-pretty text-lg leading-relaxed text-pg-navy-muted">
-                At Prime Gold, we make gold investment simple and accessible. With a
-                curated selection of minted gold bars from renowned brands like Valcambi,
-                our platform lets you buy gold seamlessly.
+                Certified gold bars from the names investors trust, bought in minutes
+                and held with confidence. Real metal, real ownership, no complications.
               </p>
             </Reveal>
             <Reveal delay={0.24}>
