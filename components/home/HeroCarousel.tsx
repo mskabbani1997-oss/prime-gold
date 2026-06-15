@@ -68,12 +68,12 @@ export function HeroCarousel({
         {items.map((it, i) => {
           const d = rel(i);
           const abs = Math.abs(d);
-          const visible = abs <= 2;
-          // strong center emphasis: the active product pops forward (>1) and
-          // sharp; neighbours shrink + blur hard for dramatic depth.
-          const scale = d === 0 ? 1.18 : abs === 1 ? 0.6 : 0.42;
-          const blur = d === 0 ? 0 : abs === 1 ? 5 : 9;
-          const opacity = !visible ? 0 : d === 0 ? 1 : abs === 1 ? 0.5 : 0.22;
+          // One clear hero bar plus a single quiet shelf: only the immediate
+          // neighbours show, faded well back (no second row of ghosts).
+          const visible = abs <= 1;
+          const scale = d === 0 ? 1.18 : 0.55;
+          const blur = d === 0 ? 0 : 6;
+          const opacity = !visible ? 0 : d === 0 ? 1 : 0.28;
           const x = d * spread;
           return (
             <motion.div

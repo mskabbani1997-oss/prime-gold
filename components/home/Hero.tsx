@@ -30,14 +30,12 @@ export function Hero() {
         <div className="absolute inset-0 bg-pg-navy" />
         <GoldParticles className="absolute inset-0" />
         <div className="absolute inset-0 bg-[radial-gradient(60%_55%_at_62%_40%,rgba(184,134,47,0.18),transparent_70%)]" />
+        {/* single tree-of-life watermark: right side only, behind the carousel,
+            bleeding off the right edge, never behind the left headline */}
         <TreeWatermark
-          className="-left-40 top-1/2 h-[880px] w-[880px] -translate-y-1/2"
-          opacity="opacity-[0.08]"
+          className="bottom-0 -right-16 top-auto h-[340px] w-[340px] sm:bottom-auto sm:-right-48 sm:top-1/2 sm:h-[820px] sm:w-[820px] sm:-translate-y-1/2"
+          opacity="opacity-[0.06] sm:opacity-[0.07]"
         />
-        {/* faint PRIME wordmark watermark, upper area */}
-        <span className="pointer-events-none absolute left-1/2 top-[10%] -translate-x-1/2 select-none font-display text-[22vw] font-semibold uppercase leading-none tracking-[0.08em] text-pg-navy-text opacity-[0.05]">
-          Prime
-        </span>
         {/* faded edge gradient into the next (light) section */}
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-pg-bg/0" />
         <div className="pointer-events-none absolute inset-0 pg-grain opacity-[0.05] mix-blend-overlay" />
@@ -56,8 +54,8 @@ export function Hero() {
                 whileInView) is the wrong tool for the above-the-fold hero H1:
                 its translateY(115%) initial state stayed stuck (the reveal never
                 fired for the tall headline), leaving the text clipped/invisible. */}
-            <h1 className="mt-4 font-display text-[3.25rem] font-bold leading-[1.0] sm:text-7xl lg:text-[6.5rem] xl:text-[7.25rem]">
-              Your trusted partner in{" "}
+            <h1 className="mt-4 font-display text-[2.875rem] font-bold leading-[1.0] sm:text-[4rem] lg:text-[5.75rem] xl:text-[6.5rem]">
+              <span className="text-pg-navy-text">Your trusted partner in</span>{" "}
               <span className="italic font-semibold text-pg-rose">gold investment</span>
             </h1>
             <Reveal delay={0.14}>
