@@ -24,7 +24,7 @@ const CARDS = [
 
 export function CategoryShowcase() {
   return (
-    <section className="bg-pg-surface py-20 lg:py-28">
+    <section className="bg-pg-surface py-24 lg:py-36">
       <div className="pg-container">
         <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <h2 className="max-w-md text-balance font-display text-3xl font-semibold leading-tight md:text-5xl">

@@ -20,7 +20,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       { q: "Is there a minimum order?", a: "You can start from a single one-gram bar. There is no large minimum to begin." },
       { q: "How is my order delivered?", a: "Orders ship fully insured with tracking, or you can collect from our Dubai office." },
       { q: "Can I store the gold with you instead of taking delivery?", a: "Yes. We offer insured storage, so you can own metal without keeping it at home." },
-      { q: "Do you deliver to Lebanon?", a: "Yes. We arrange insured delivery to Lebanon alongside the UAE." },
+      { q: "Do you deliver across the MENA region?", a: "Yes. Alongside the UAE, we arrange fully insured delivery across the wider MENA region." },
       { q: "How do I know the gold is genuine?", a: "Each item is certified at the refinery, serial numbered, and sealed. The assay card confirms its weight and purity." },
     ],
   },
@@ -46,12 +46,12 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
   {
     title: "Other questions",
     items: [
-      { q: "Where are you based?", a: "Our office is in Al Ras, Dubai, and we serve clients across the UAE and Lebanon." },
+      { q: "Where are you based?", a: "Our office is in the Gold Souk, Hind Plaza 108, Dubai, and we serve clients across the UAE and the wider MENA region." },
       { q: "Are your prices in AED?", a: "Yes, all prices are shown in UAE dirhams." },
       { q: "What is the difference between bars and coins?", a: "Bars sit closest to the metal value. Coins carry a mint guarantee and resell easily. Both are certified." },
       { q: "What is LBMA approval?", a: "It means a refiner meets the London Bullion Market Association standards, so its bars are accepted worldwide." },
       { q: "Do you charge VAT on gold?", a: "Investment-grade gold is generally treated favourably for tax in the UAE. We confirm any applicable charges at checkout." },
-      { q: "How do I contact support?", a: "Call +961 70 882 983, email info@primegoldshop.com, or use the contact form." },
+      { q: "How do I contact support?", a: "Call 056 340 0600, message us on WhatsApp, email info@primegoldshop.com, or use the contact form." },
     ],
   },
 ];

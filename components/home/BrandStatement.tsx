@@ -21,7 +21,7 @@ export function BrandStatement() {
             Gold without <span className="text-gold-gradient italic">compromise</span>
           </h2>
           <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-pg-text-muted">
-            Real metal, certified at the source, priced honestly, and protected at every
+            Real metal, certified at the source, no hidden fees, and protected at every
             step. The way serious wealth has always been kept.
           </p>
           <div className="mt-9">

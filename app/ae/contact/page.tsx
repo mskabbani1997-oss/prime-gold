@@ -3,10 +3,9 @@ import {
   Phone,
   EnvelopeSimple,
   MapPin,
+  WhatsappLogo,
   InstagramLogo,
-  XLogo,
   FacebookLogo,
-  YoutubeLogo,
 } from "@phosphor-icons/react/dist/ssr";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Reveal } from "@/components/ui/Reveal";
@@ -17,15 +16,13 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "Contact Prime Gold | Gold Dealer in Dubai, UAE",
   description:
-    "Contact Prime Gold in Dubai. Call, email, or visit our Al Ras office for help with buying, storing, or selling certified gold bullion.",
+    "Contact Prime Gold in Dubai. Call, WhatsApp, email, or visit our Gold Souk office for help with buying, storing, or selling certified gold bullion.",
   path: "/ae/contact",
 });
 
 const socials = [
   { Icon: InstagramLogo, href: SITE.social.instagram, label: "Instagram" },
-  { Icon: XLogo, href: SITE.social.x, label: "X" },
   { Icon: FacebookLogo, href: SITE.social.facebook, label: "Facebook" },
-  { Icon: YoutubeLogo, href: SITE.social.youtube, label: "YouTube" },
 ];
 
 const localBusiness = {
@@ -34,7 +31,7 @@ const localBusiness = {
   name: SITE.name,
   legalName: SITE.legalName,
   url: SITE.origin + "/ae/contact",
-  telephone: SITE.contact.phone,
+  telephone: SITE.contact.phoneTel,
   email: SITE.contact.email,
   image: SITE.origin + "/images/og-default.webp",
   address: {
@@ -44,8 +41,8 @@ const localBusiness = {
     addressRegion: "Dubai",
     addressCountry: SITE.contact.office.countryCode,
   },
-  areaServed: ["AE", "LB"],
-  sameAs: [SITE.social.instagram, SITE.social.x, SITE.social.facebook, SITE.social.youtube],
+  areaServed: ["AE"],
+  sameAs: [SITE.social.instagram, SITE.social.facebook],
 };
 
 export default function ContactPage() {
@@ -79,7 +76,7 @@ export default function ContactPage() {
         <Reveal className="flex flex-col gap-8">
           <div className="space-y-5">
             <a
-              href={`tel:${SITE.contact.phone.replace(/\s/g, "")}`}
+              href={`tel:${SITE.contact.phoneTel}`}
               className="group flex items-center gap-4"
             >
               <span className="grid h-12 w-12 place-items-center rounded-full border border-pg-border-strong text-pg-accent transition-colors group-hover:border-pg-rose">
@@ -88,6 +85,20 @@ export default function ContactPage() {
               <span>
                 <span className="block text-xs uppercase tracking-wide text-pg-text-faint">Call</span>
                 <span className="text-pg-text">{SITE.contact.phone}</span>
+              </span>
+            </a>
+            <a
+              href={`https://wa.me/${SITE.contact.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4"
+            >
+              <span className="grid h-12 w-12 place-items-center rounded-full border border-pg-border-strong text-pg-accent transition-colors group-hover:border-pg-rose">
+                <WhatsappLogo size={20} />
+              </span>
+              <span>
+                <span className="block text-xs uppercase tracking-wide text-pg-text-faint">WhatsApp</span>
+                <span className="text-pg-text">Chat with us &middot; {SITE.contact.phone}</span>
               </span>
             </a>
             <a href={`mailto:${SITE.contact.email}`} className="group flex items-center gap-4">
@@ -109,7 +120,7 @@ export default function ContactPage() {
                 </span>
                 <span className="text-pg-text">{SITE.contact.office.company}</span>
                 <span className="block text-sm text-pg-text-muted">
-                  {SITE.contact.office.line1}, {SITE.contact.office.area}, {SITE.contact.office.city},{" "}
+                  {SITE.contact.office.line1}, {SITE.contact.office.city},{" "}
                   {SITE.contact.office.country}
                 </span>
               </span>

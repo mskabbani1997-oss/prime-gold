@@ -28,7 +28,7 @@ const PILLARS = [
   { Icon: Mountains, title: "Swiss-backed gold", body: "Bullion refined and certified to Swiss standards, accepted on the London market." },
   { Icon: Scales, title: "Regulatory compliance", body: "We operate within UAE trade regulation, with clear records on every transaction." },
   { Icon: ArrowsLeftRight, title: "Flexible ownership", body: "Hold your gold in insured storage or take physical delivery. Switch whenever you want." },
-  { Icon: HeartStraight, title: "Peace of mind", body: "Certified metal, transparent pricing, and insurance at every stage of ownership." },
+  { Icon: HeartStraight, title: "Peace of mind", body: "Certified metal, no hidden fees, and insurance at every stage of ownership." },
 ];
 
 const SERVICES = [
@@ -40,7 +40,7 @@ const SERVICES = [
 ];
 
 const COMMITMENTS = [
-  { title: "Honest pricing", body: "What you see is what you pay. Our premiums are stated up front and tied to the live market." },
+  { title: "No hidden fees", body: "What you see is what you pay. Our premiums are stated up front and tied to the live market." },
   { title: "Real metal, real proof", body: "Every holding is physical, certified gold or silver, documented from the refinery to your hands." },
   { title: "Service that lasts", body: "We are here for the sellback as much as the purchase, across the UAE and Lebanon." },
 ];
@@ -82,8 +82,8 @@ export default function AboutPage() {
           <Reveal className="max-w-prose space-y-4 text-pretty leading-relaxed text-pg-text-muted">
             <p>
               Prime Gold gives people a straightforward way to own physical gold. We bring
-              certified Swiss and regional bullion to the region, price it honestly against
-              the spot market, and stand behind every bar and coin we sell.
+              certified Swiss and regional bullion to the region, price it against the
+              spot market with no hidden fees, and stand behind every bar and coin we sell.
             </p>
             <p>
               We run on a Swiss-standard platform and serve clients across the UAE and

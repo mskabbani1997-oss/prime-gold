@@ -53,7 +53,7 @@ const organizationSchema = {
   url: SITE.origin + SITE.home,
   logo: SITE.origin + "/pg-logo.svg",
   description: SITE.description,
-  telephone: SITE.contact.phone,
+  telephone: SITE.contact.phoneTel,
   email: SITE.contact.email,
   address: {
     "@type": "PostalAddress",
@@ -62,12 +62,7 @@ const organizationSchema = {
     addressCountry: SITE.contact.office.countryCode,
   },
   areaServed: ["AE", "LB"],
-  sameAs: [
-    SITE.social.instagram,
-    SITE.social.x,
-    SITE.social.facebook,
-    SITE.social.youtube,
-  ],
+  sameAs: [SITE.social.instagram, SITE.social.facebook],
 };
 
 const websiteSchema = {

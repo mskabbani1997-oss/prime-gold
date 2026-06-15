@@ -3,12 +3,26 @@
  * Routing mirrors the live site at primegoldshop.com/ae exactly.
  */
 
+/**
+ * Site origin for canonical + Open Graph URLs. Single source of truth, driven by
+ * env so it resolves to wherever the site is deployed (NEVER hardcoded to the
+ * client's old domain). Set NEXT_PUBLIC_SITE_URL for the real production domain;
+ * otherwise it falls back to the Vercel deployment URL, then localhost.
+ */
+const SITE_ORIGIN =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000");
+
 export const SITE = {
   name: "Prime Gold",
   legalName: "Salor Gold Trading LLC",
   locale: "ae",
   /** Production origin, used for canonical + Open Graph URLs. */
-  origin: "https://primegoldshop.com",
+  origin: SITE_ORIGIN,
   /** Home path for the UAE locale. */
   home: "/ae",
   tagline: "Your trusted partner in gold investment",
@@ -16,24 +30,25 @@ export const SITE = {
     "Buy certified gold bars and coins in the UAE, priced live against the global spot market, with insured storage and safe delivery across Dubai and Lebanon.",
 
   contact: {
-    phone: "+961 70 882 983",
+    /** Display form (UAE local). */
+    phone: "056 340 0600",
+    /** Dialable E.164 form for tel: links and schema. */
+    phoneTel: "+971563400600",
+    /** wa.me click-to-chat number (no +). */
+    whatsapp: "971563400600",
     email: "info@primegoldshop.com",
     office: {
       company: "Salor Gold Trading LLC",
-      line1: "Office 108, Floor 1, Hind Plaza Building 1/A",
-      area: "Al Ras",
+      line1: "Gold Souk, Hind Plaza 108",
       city: "Dubai",
       country: "United Arab Emirates",
       countryCode: "AE",
     },
   },
 
-  // Best-guess handles. Confirm exact URLs before launch.
   social: {
-    instagram: "https://www.instagram.com/primegoldshop",
-    x: "https://x.com/primegoldshop",
-    facebook: "https://www.facebook.com/primegoldshop",
-    youtube: "https://www.youtube.com/@primegoldshop",
+    instagram: "https://www.instagram.com/primegoldmena/",
+    facebook: "https://www.facebook.com/p/Prime-Gold-61567137142072/",
   },
 } as const;
 

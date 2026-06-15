@@ -53,7 +53,7 @@ export function ProductMedia({
           "absolute inset-0 bg-transparent transition-opacity duration-500 ease-luxe",
           revealed && hasReveal ? "opacity-0" : "opacity-100"
         )}
-        imgClassName="object-contain p-3 sm:p-5"
+        imgClassName="object-contain object-center p-3 sm:p-5"
       />
       {hasReveal && (
         <BrandImage
@@ -64,7 +64,7 @@ export function ProductMedia({
             "absolute inset-0 bg-transparent transition-opacity duration-500 ease-luxe",
             revealed ? "opacity-100" : "opacity-0"
           )}
-          imgClassName="object-contain p-3 sm:p-5"
+          imgClassName="object-contain object-center p-3 sm:p-5"
         />
       )}
       {hasReveal && (

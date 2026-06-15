@@ -14,13 +14,13 @@ export function PriceTicker({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "group relative overflow-hidden border-y border-pg-border bg-pg-surface/50 backdrop-blur-sm",
+        "group relative overflow-hidden border-y border-white/10 bg-pg-navy-deep/50 backdrop-blur-sm",
         className
       )}
     >
       {/* edge fades */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-pg-bg to-transparent sm:w-16" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-pg-bg to-transparent sm:w-16" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-pg-navy to-transparent sm:w-16" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-pg-navy to-transparent sm:w-16" />
 
       <ul
         aria-hidden
@@ -30,10 +30,10 @@ export function PriceTicker({ className }: { className?: string }) {
           const up = item.change >= 0;
           return (
             <li key={i} className="flex items-center gap-2.5 whitespace-nowrap">
-              <span className="text-[11px] uppercase tracking-wide text-pg-text-faint">
+              <span className="text-[11px] uppercase tracking-wide text-pg-navy-muted">
                 {item.label}
               </span>
-              <span className="tabular text-sm font-medium text-pg-text">{item.value}</span>
+              <span className="tabular text-sm font-medium text-pg-navy-text">{item.value}</span>
               <span
                 className={cn(
                   "tabular inline-flex items-center gap-0.5 text-xs",
@@ -43,7 +43,7 @@ export function PriceTicker({ className }: { className?: string }) {
                 {up ? <CaretUp size={11} weight="fill" /> : <CaretDown size={11} weight="fill" />}
                 {Math.abs(item.change).toFixed(2)}%
               </span>
-              <span aria-hidden className="text-pg-border-strong">
+              <span aria-hidden className="text-white/20">
                 /
               </span>
             </li>

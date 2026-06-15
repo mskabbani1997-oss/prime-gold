@@ -50,7 +50,7 @@ export function FeaturedCollection({
 
   if (layout === "banner") {
     return (
-      <section className="pg-container py-20 lg:py-28">
+      <section className="pg-container py-24 lg:py-36">
         <Reveal>
           <div className="relative overflow-hidden rounded-3xl border border-pg-border">
             <BrandImage
@@ -76,7 +76,7 @@ export function FeaturedCollection({
   }
 
   return (
-    <section className="pg-container py-20 lg:py-28">
+    <section className="pg-container py-24 lg:py-36">
       <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
         <Reveal>
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-pg-border">

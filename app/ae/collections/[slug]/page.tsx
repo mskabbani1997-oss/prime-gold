@@ -11,6 +11,7 @@ import {
   type CollectionSlug,
 } from "@/lib/data";
 import { pageMeta, breadcrumbJsonLd, productJsonLd } from "@/lib/seo";
+import { SITE } from "@/lib/site";
 
 const SEO: Record<CollectionSlug, { title: string; description: string }> = {
   valcambi: {
@@ -57,7 +58,7 @@ export default function CollectionPage({ params }: { params: { slug: string } })
             "@type": "CollectionPage",
             name: collection.name,
             description: seo.description,
-            url: "https://primegoldshop.com" + path,
+            url: SITE.origin + path,
             about: { "@type": "Brand", name: collection.name },
           },
           ...products.map((p) => productJsonLd(p, path)),

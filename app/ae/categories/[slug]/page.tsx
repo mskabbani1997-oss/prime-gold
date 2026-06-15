@@ -7,6 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { CATEGORIES, getCategory, getProductsByCategory, type CategorySlug } from "@/lib/data";
 import { pageMeta, breadcrumbJsonLd, productJsonLd } from "@/lib/seo";
+import { SITE } from "@/lib/site";
 
 const SEO: Record<CategorySlug, { title: string; description: string; h1: string; intro: string; copy: string[] }> = {
   "gold-bars": {
@@ -78,7 +79,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             "@type": "CollectionPage",
             name: category.name,
             description: seo.description,
-            url: "https://primegoldshop.com" + path,
+            url: SITE.origin + path,
           },
           ...products.map((p) => productJsonLd(p, path)),
         ]}
@@ -96,11 +97,11 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         ]}
       />
 
-      <section className="pg-container py-16 lg:py-20">
+      <section className="pg-container pt-14 pb-6 lg:pt-20 lg:pb-8">
         <ProductGrid products={products} />
       </section>
 
-      <section className="bg-pg-surface py-16 lg:py-24">
+      <section className="bg-pg-surface pb-20 pt-10 lg:pb-28 lg:pt-12">
         <div className="pg-container">
           <SectionHeading title={`About ${category.name.toLowerCase()}`} />
           <Reveal className="mt-6 max-w-prose space-y-4 text-pretty leading-relaxed text-pg-text-muted">
