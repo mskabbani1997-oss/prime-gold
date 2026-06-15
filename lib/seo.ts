@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE } from "./site";
+import { SITE, ROBOTS } from "./site";
 import { formatAED, type Product } from "./data";
 
 /** Build per-page metadata with an absolute title (bypasses the layout template). */
@@ -18,7 +18,7 @@ export function pageMeta({
     title: { absolute: title },
     description,
     alternates: { canonical: path },
-    robots: { index: true, follow: true },
+    robots: ROBOTS,
     openGraph: {
       type: "website",
       siteName: SITE.name,

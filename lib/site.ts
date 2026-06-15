@@ -26,6 +26,34 @@ const SITE_ORIGIN =
     ? `https://${process.env.VERCEL_URL}`
     : "http://localhost:3010");
 
+/**
+ * Indexability gate. ONLY the real production domain should be crawled. Any
+ * Vercel preview (*.vercel.app) and local dev stay noindex,nofollow, so an
+ * unsold-client preview is never indexed and the preview canonical value is
+ * irrelevant to search engines. At launch, point NEXT_PUBLIC_SITE_URL at the
+ * real custom domain (set it on the Production environment only) and that deploy
+ * becomes indexable automatically. Leave NEXT_PUBLIC_SITE_URL unset on Preview
+ * so canonical falls back to VERCEL_URL (the URL of the build actually serving
+ * the content), not a shared alias.
+ */
+const SITE_HOST = (() => {
+  try {
+    return new URL(SITE_ORIGIN).hostname;
+  } catch {
+    return "";
+  }
+})();
+
+export const IS_INDEXABLE =
+  SITE_HOST.length > 0 &&
+  SITE_HOST !== "localhost" &&
+  !SITE_HOST.endsWith(".vercel.app");
+
+/** Robots directive shared by the layout default and per-page metadata. */
+export const ROBOTS = IS_INDEXABLE
+  ? { index: true, follow: true }
+  : { index: false, follow: false };
+
 export const SITE = {
   name: "Prime Gold",
   legalName: "Salor Gold Trading LLC",

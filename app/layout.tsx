@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
-import { SITE } from "@/lib/site";
+import { SITE, ROBOTS } from "@/lib/site";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   applicationName: SITE.name,
-  robots: { index: true, follow: true },
+  robots: ROBOTS,
   alternates: { canonical: SITE.home },
   openGraph: {
     type: "website",
