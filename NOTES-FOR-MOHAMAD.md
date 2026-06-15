@@ -8,20 +8,33 @@ Last updated: 2026-06-15
 
 ---
 
-## 1. Canonical / Open Graph URL (action required before production)
+## 1. Canonical / Open Graph URL + indexing
 
-**You MUST set `NEXT_PUBLIC_SITE_URL` to the real production domain** (e.g.
-`https://primegoldshop.com`) in the Vercel **Production** environment variables.
+Origin logic lives in `lib/site.ts` (`SITE_ORIGIN`). It drives `metadataBase`,
+so canonical, `og:url`, `og:image`, and all JSON-LD URLs resolve from one value.
+Resolution order: `NEXT_PUBLIC_SITE_URL` → `VERCEL_URL` (the build actually
+serving the page) → `http://localhost:3010` (dev). No domain is hardcoded.
 
-- Origin logic lives in `lib/site.ts` (`SITE_ORIGIN`). It drives `metadataBase`,
-  so canonical, `og:url`, `og:image`, and all JSON-LD URLs resolve from one value.
-- Resolution order: `NEXT_PUBLIC_SITE_URL` → `VERCEL_URL` (the actual current
-  deployment) → `http://localhost:3010` (dev).
-- **Fixed bug:** the old code fell back to `VERCEL_PROJECT_PRODUCTION_URL`, the
-  auto-assigned project alias `prime-gold-taupe.vercel.app`. With no
-  `NEXT_PUBLIC_SITE_URL` set, canonical + og:url pointed at that stale alias.
-  That alias is no longer used anywhere — but canonical is only correct in
-  production once `NEXT_PUBLIC_SITE_URL` is set.
+**Vercel environment variable setup:**
+
+- **Production:** set `NEXT_PUBLIC_SITE_URL` to the **real custom domain** (e.g.
+  `https://primegoldshop.com`, no trailing slash). This makes canonical correct
+  AND makes the deploy indexable.
+- **Preview:** leave `NEXT_PUBLIC_SITE_URL` **unset**. Canonical then falls back
+  to `VERCEL_URL` (this exact build), not a shared alias.
+
+**Indexing gate (so unsold-client previews are never crawled):** a deploy is
+indexable ONLY when its origin is a real custom domain. Any `*.vercel.app`
+preview or localhost outputs `<meta name="robots" content="noindex,nofollow">`
+and a `robots.txt` of `Disallow: /`. The real domain on Production is indexable
+automatically. This is why the preview canonical value no longer matters.
+
+**Original bug (fixed):** the old code fell back to
+`VERCEL_PROJECT_PRODUCTION_URL` (the `prime-gold-taupe.vercel.app` alias), so
+with `NEXT_PUBLIC_SITE_URL` unset, canonical pointed at that stale alias. That
+fallback is gone. Note `prime-gold.vercel.app` is owned by an unrelated
+deployment, so this project's only auto alias contains `-taupe`; that is moot
+now because previews are noindex and the real domain is set at launch.
 
 ## 2. Prices are DEMO figures — confirm before go-live
 
