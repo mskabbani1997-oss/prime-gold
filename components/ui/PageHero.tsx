@@ -25,7 +25,7 @@ export function PageHero({
   children?: React.ReactNode;
 }) {
   return (
-    <section className="relative -mt-[72px] flex min-h-[56vh] items-end overflow-hidden pt-[120px]">
+    <section className="relative flex min-h-[56vh] items-end overflow-hidden pt-10 md:-mt-[72px] md:pt-[120px]">
       <BrandImage
         src={image}
         alt=""

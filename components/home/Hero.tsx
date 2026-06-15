@@ -43,8 +43,8 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-0 pg-grain opacity-[0.05] mix-blend-overlay" />
       </div>
 
-      <div className="pg-container relative flex flex-1 items-center py-20 lg:py-24">
-        <div className="grid w-full items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="pg-container relative flex flex-1 items-start py-20 lg:items-center lg:py-24">
+        <div className="grid w-full items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           {/* copy */}
           <div className="max-w-xl">
             <Reveal>
@@ -87,7 +87,7 @@ export function Hero() {
           <Reveal delay={0.2} className="w-full">
             <HeroCarousel
               items={carouselItems}
-              className="mx-auto h-[420px] w-full max-w-[480px] sm:h-[480px]"
+              className="mx-auto h-[340px] w-full max-w-[480px] sm:h-[480px]"
             />
           </Reveal>
         </div>

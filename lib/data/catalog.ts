@@ -132,7 +132,7 @@ export const PRODUCTS: Product[] = [
     name: "Armillary 1 oz Gold Coin",
     metal: "gold",
     category: "gold-coins",
-    collection: "valcambi",
+    collection: "sam-precious-metals",
     weightG: 31.1,
     weightLabel: "1 oz",
     priceAED: 18000,

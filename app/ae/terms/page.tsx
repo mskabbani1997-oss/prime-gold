@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "Terms & Conditions | Prime Gold",
   description:
-    "Read the terms and conditions for buying, storing, and selling gold bullion with Prime Gold in the UAE and Lebanon.",
+    "Read the terms and conditions for buying, storing, and selling gold bullion with Prime Gold in the UAE and the wider MENA region.",
   path: "/ae/terms",
 });
 

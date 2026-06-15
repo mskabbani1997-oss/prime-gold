@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Plus } from "@phosphor-icons/react";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import type { Faq } from "@/lib/faqs";
 import { cn } from "@/lib/cn";
 
@@ -34,21 +34,19 @@ export function Accordion({ items }: { items: Faq[] }) {
                 </span>
               </button>
             </h3>
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  initial={reduce ? false : { height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={reduce ? { opacity: 0 } : { height: 0, opacity: 0 }}
-                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                  className="overflow-hidden"
-                >
-                  <p className="max-w-prose pb-5 pr-10 leading-relaxed text-pg-text-muted">
-                    {item.a}
-                  </p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {/* The answer is always rendered in the DOM (server-side included) so
+                search engines can read it; it is only visually collapsed when
+                closed. */}
+            <motion.div
+              initial={false}
+              animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+              transition={reduce ? { duration: 0 } : { duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="overflow-hidden"
+            >
+              <p className="max-w-prose pb-5 pr-10 leading-relaxed text-pg-text-muted">
+                {item.a}
+              </p>
+            </motion.div>
           </div>
         );
       })}

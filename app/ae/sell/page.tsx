@@ -14,7 +14,7 @@ import { pageMeta, breadcrumbJsonLd } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Sell Your Gold in the UAE | Prime Gold Buyback",
   description:
-    "Sell your gold back to Prime Gold at fair market value. Quick verification, prompt payment, and clear pricing across the UAE and Lebanon.",
+    "Sell your gold back to Prime Gold at fair market value. Quick verification, prompt payment, and clear pricing across the UAE and the wider MENA region.",
   path: "/ae/sell",
 });
 
@@ -77,7 +77,7 @@ export default function SellPage() {
           <SectionHeading
             eyebrow="How it works"
             title="Three steps from item to payment"
-            intro="A straightforward buyback with no surprises — most sellbacks are settled the same day."
+            intro="A straightforward buyback with no surprises. Most sellbacks are settled the same day."
           />
           <RevealGroup className="mt-12 grid gap-5 md:grid-cols-3">
             {STEPS.map(({ Icon, step, title, body }) => (

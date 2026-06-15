@@ -58,7 +58,7 @@ export function ProductMedia({
       {hasReveal && (
         <BrandImage
           src={revealImage as string}
-          alt={`${alt} — packaging`}
+          alt={`${alt} packaging`}
           sizes={sizes}
           className={cn(
             "absolute inset-0 bg-transparent transition-opacity duration-500 ease-luxe",

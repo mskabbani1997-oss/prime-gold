@@ -1,5 +1,4 @@
 import { ProductCard } from "./ProductCard";
-import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import type { Product } from "@/lib/data";
 import { cn } from "@/lib/cn";
 
@@ -18,18 +17,20 @@ export function ProductGrid({
     );
   }
 
+  // Plain grid (same approach as the store): every product is in the static DOM
+  // and always visible. The previous whileInView reveal could leave a tall grid
+  // (e.g. 22 products, 2 columns at tablet width) stuck at opacity 0 when the
+  // container was taller than the viewport could ever satisfy its trigger amount.
   return (
-    <RevealGroup
+    <div
       className={cn(
         "grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4",
         className
       )}
     >
       {products.map((product) => (
-        <RevealItem key={product.id}>
-          <ProductCard product={product} />
-        </RevealItem>
+        <ProductCard key={product.id} product={product} />
       ))}
-    </RevealGroup>
+    </div>
   );
 }

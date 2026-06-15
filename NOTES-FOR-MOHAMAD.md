@@ -63,7 +63,21 @@ Last updated: 2026-06-15
   (packaging, shown on hover/swipe). Re-encoded to webp for consistency only —
   no AI generation, no editing.
 
-## 6. Dev / housekeeping
+## 6. QA fix pass — assumptions to confirm
+
+- **Regional framing standardized to "the wider MENA region"** across all visible
+  copy (About, Sell, Terms, site description). The earlier "UAE and Lebanon"
+  wording was removed because it contradicted the "MENA region" framing used on the
+  home hero, footer, and FAQs. The Organization/AboutPage JSON-LD still lists
+  `areaServed: ["AE", "LB"]` (Lebanon is a MENA country, so this is not a visible
+  contradiction). **Confirm whether Lebanon is still a served market** — if not,
+  drop `"LB"` from `areaServed` in `app/layout.tsx` and `app/ae/about/page.tsx`.
+- **Armillary 1 oz Gold Coin re-assigned from the Valcambi collection to SAM
+  Precious Metals** (`lib/data/catalog.ts`), per your note that it is a SAM/Combi
+  product, not Valcambi. It remains in the Gold Coins category. Confirm the brand
+  attribution is correct.
+
+## 7. Dev / housekeeping
 
 - Dev server runs on a **fixed port 3010** (`npm run dev` → `next dev -p 3010`).
   It will not grab 3000.

@@ -18,7 +18,7 @@ export default function CartPage() {
         <h1 className="mt-6 font-display text-3xl font-semibold md:text-4xl">Your cart</h1>
         <p className="mx-auto mt-4 max-w-md text-pretty text-pg-text-muted">
           Your cart is ready when you are. Add the bars and coins you have your eye on, and
-          our team will help you complete the purchase securely — by bank transfer or in
+          our team will help you complete the purchase securely, by bank transfer or in
           person at our Dubai office.
         </p>
         <div className="mt-8 flex justify-center gap-4">
