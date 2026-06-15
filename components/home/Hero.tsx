@@ -43,24 +43,26 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-0 pg-grain opacity-[0.05] mix-blend-overlay" />
       </div>
 
-      <div className="pg-container relative flex flex-1 items-start py-8 sm:py-10 lg:items-center lg:py-10">
-        <div className="grid w-full items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
-          {/* copy */}
-          <div className="max-w-xl">
+      <div className="pg-container relative flex flex-1 items-start py-8 sm:py-10 lg:py-10">
+        <div className="grid w-full items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+          {/* copy, anchored top-left */}
+          <div className="max-w-2xl">
             <Reveal>
               <p className="text-[11px] uppercase tracking-luxe text-pg-navy-muted">
                 Gold bullion &middot; UAE &amp; MENA
               </p>
             </Reveal>
-            <h1 className="mt-4 font-display text-5xl font-bold leading-[1.0] sm:text-7xl lg:text-[6rem] xl:text-[6.5rem]">
+            <h1 className="mt-4 font-display text-[3.25rem] font-bold leading-[1.0] sm:text-7xl lg:text-[6.5rem] xl:text-[7.25rem]">
               <ClipReveal>
                 Your trusted partner in{" "}
-                <span className="text-gold-gradient italic">gold investment</span>
+                <span className="italic font-semibold text-pg-rose">gold investment</span>
               </ClipReveal>
             </h1>
             <Reveal delay={0.14}>
-              <p className="mt-5 max-w-md font-display text-lg font-medium leading-snug text-pg-navy-text sm:text-xl lg:text-2xl">
-                Buy gold with secure delivery or insured storage in the MENA region.
+              <p className="mt-5 max-w-md text-pretty text-lg leading-relaxed text-pg-navy-muted">
+                At Prime Gold, we make gold investment simple and accessible. With a
+                curated selection of minted gold bars from renowned brands like Valcambi,
+                our platform lets you buy gold seamlessly.
               </p>
             </Reveal>
             <Reveal delay={0.24}>
