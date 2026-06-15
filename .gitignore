@@ -36,3 +36,8 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# playwright hero verification artifacts (proof scripts + screenshots, never commit)
+scripts/*.mjs
+scripts/hero-*.png
+scripts/subhead-*.png
