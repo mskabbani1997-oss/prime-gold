@@ -24,7 +24,7 @@ const carouselItems: CarouselItem[] = CAROUSEL_SLUGS.flatMap((slug) => {
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[88vh] flex-col overflow-hidden bg-pg-navy text-pg-navy-text">
+    <section className="relative flex min-h-[calc(100svh_-_6.75rem)] flex-col overflow-hidden bg-pg-navy text-pg-navy-text">
       {/* background layers */}
       <div aria-hidden className="absolute inset-0">
         <div className="absolute inset-0 bg-pg-navy" />
@@ -43,35 +43,35 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-0 pg-grain opacity-[0.05] mix-blend-overlay" />
       </div>
 
-      <div className="pg-container relative flex flex-1 items-start py-14 sm:py-16 lg:items-center lg:py-24">
+      <div className="pg-container relative flex flex-1 items-start py-8 sm:py-10 lg:items-center lg:py-12">
         <div className="grid w-full items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           {/* copy */}
           <div className="max-w-xl">
             <Reveal>
-              <p className="mb-4 text-[11px] uppercase tracking-luxe text-pg-navy-muted sm:mb-5">
+              <p className="text-[11px] uppercase tracking-luxe text-pg-navy-muted">
                 Gold bullion &middot; UAE &amp; MENA
               </p>
             </Reveal>
-            <h1 className="font-display text-[3.25rem] font-bold leading-[1.02] sm:text-7xl lg:text-[5.75rem]">
-              <ClipReveal>
+            <Reveal delay={0.06}>
+              <p className="mt-3 font-display text-lg font-medium leading-snug text-pg-navy-text/90 sm:text-xl">
                 Your trusted partner in{" "}
                 <span className="text-gold-gradient italic">gold investment</span>
-              </ClipReveal>
-            </h1>
-            <Reveal delay={0.12}>
-              <p className="mt-4 font-display text-2xl font-medium leading-snug text-pg-navy-text sm:mt-5 sm:text-[1.75rem] lg:text-[2rem]">
-                Buy gold with secure delivery or insured storage in the MENA region.
               </p>
             </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-4 max-w-md text-pretty text-lg leading-relaxed text-pg-navy-muted sm:mt-6">
+            <h1 className="mt-3 font-display text-[2.25rem] font-bold leading-[1.05] sm:text-[2.75rem] lg:text-[3.4rem]">
+              <ClipReveal>
+                Buy gold with secure delivery or insured storage in the MENA region.
+              </ClipReveal>
+            </h1>
+            <Reveal delay={0.18}>
+              <p className="mt-4 max-w-md text-pretty text-lg leading-relaxed text-pg-navy-muted sm:mt-5">
                 At Prime Gold, we make gold investment simple and accessible. With a
                 curated selection of minted gold bars from renowned brands like Valcambi,
                 our platform lets you buy gold seamlessly.
               </p>
             </Reveal>
             <Reveal delay={0.28}>
-              <div className="mt-7 flex flex-wrap items-center gap-4 sm:mt-9">
+              <div className="mt-6 flex flex-wrap items-center gap-4 sm:mt-8">
                 <Button href="/ae/store" size="lg">
                   Shop gold
                   <ArrowRight size={18} weight="bold" />
