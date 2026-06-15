@@ -1,6 +1,6 @@
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@/components/ui/Button";
-import { Reveal, ClipReveal } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { TreeWatermark } from "@/components/brand/TreeWatermark";
 import { GoldParticles } from "./GoldParticles";
 import { PriceTicker } from "./PriceTicker";
@@ -52,11 +52,13 @@ export function Hero() {
                 Gold bullion &middot; UAE &amp; MENA
               </p>
             </Reveal>
+            {/* Plain, always-visible headline. A scroll-reveal (ClipReveal /
+                whileInView) is the wrong tool for the above-the-fold hero H1:
+                its translateY(115%) initial state stayed stuck (the reveal never
+                fired for the tall headline), leaving the text clipped/invisible. */}
             <h1 className="mt-4 font-display text-[3.25rem] font-bold leading-[1.0] sm:text-7xl lg:text-[6.5rem] xl:text-[7.25rem]">
-              <ClipReveal>
-                Your trusted partner in{" "}
-                <span className="italic font-semibold text-pg-rose">gold investment</span>
-              </ClipReveal>
+              Your trusted partner in{" "}
+              <span className="italic font-semibold text-pg-rose">gold investment</span>
             </h1>
             <Reveal delay={0.14}>
               <p className="mt-5 max-w-md text-pretty text-lg leading-relaxed text-pg-navy-muted">

@@ -138,7 +138,7 @@ export function HeroCarousel({
           initial={reduce ? false : { opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease }}
-          className="font-display text-base text-pg-text sm:text-lg"
+          className="font-display text-base text-pg-navy-text sm:text-lg"
         >
           {items[active]?.name}
         </motion.p>
