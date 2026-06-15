@@ -5,17 +5,26 @@
 
 /**
  * Site origin for canonical + Open Graph URLs. Single source of truth, driven by
- * env so it resolves to wherever the site is deployed (NEVER hardcoded to the
- * client's old domain). Set NEXT_PUBLIC_SITE_URL for the real production domain;
- * otherwise it falls back to the Vercel deployment URL, then localhost.
+ * env so it resolves to wherever the site is actually being served (NEVER
+ * hardcoded, and never the stale Vercel project alias).
+ *
+ * Resolution order:
+ *   1. NEXT_PUBLIC_SITE_URL  - the real production domain. MUST be set in the
+ *      Vercel production environment so canonical/og:url point at the live site.
+ *   2. VERCEL_URL            - the actual current deployment URL (matches where
+ *      this exact build is served, e.g. a branch preview). Used so canonical and
+ *      og:url agree with the page that renders them.
+ *   3. localhost (dev)       - fixed dev port for this project.
+ *
+ * VERCEL_PROJECT_PRODUCTION_URL is deliberately NOT used: it is the auto-assigned
+ * project alias (e.g. prime-gold-taupe.vercel.app) and leaked into canonical when
+ * NEXT_PUBLIC_SITE_URL was unset, pointing SEO at the wrong, stale origin.
  */
 const SITE_ORIGIN =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : process.env.VERCEL_URL
+  (process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000");
+    : "http://localhost:3010");
 
 export const SITE = {
   name: "Prime Gold",
